@@ -71,4 +71,4 @@ storage/framework/views bootstrap/cache public/uploads \
 EXPOSE 10000
 
 # Start Apache
-CMD bash -c "chmod -R 777 storage bootstrap/cache && php artisan migrate --force || true && apache2-foreground"
+CMD bash -c "chmod -R 777 /var/www/html/storage /var/www/html/bootstrap/cache && php artisan migrate --force || true && apache2-foreground"
