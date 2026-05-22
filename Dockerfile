@@ -72,4 +72,4 @@ RUN php artisan migrate --force || true
 EXPOSE 10000
 
 # Start Apache
-CMD bash -c "php artisan migrate --force || true && apache2-foreground"
+CMD bash -c "php artisan migrate --force || true && chmod -R 777 storage bootstrap/cache && apache2-foreground"
